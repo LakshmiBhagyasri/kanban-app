@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskBoard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="loginPage" class="login-page">
+    <div class="login-card">
+      <h1>TaskBoard</h1>
+      <p>Simple Collaborative Kanban</p>
+      <input id="userName" type="text" placeholder="Enter your name">
+      <input id="userEmail" type="email" placeholder="Enter your email">
+      <button id="loginBtn">Login</button>
+    </div>
+  </section>
+
+  <section id="appPage" class="app-page hidden">
+    <header class="header">
+      <div>
+        <h1>TaskBoard</h1>
+        <span id="welcomeUser"></span>
+      </div>
+      <button id="logoutBtn" class="secondary">Logout</button>
+    </header>
+
+    <main>
+      <div class="topbar">
+        <div>
+          <h2>Website Development</h2>
+          <p>ABC Technologies • Hyderabad</p>
+        </div>
+        <button id="addTaskBtn">+ Add Task</button>
+      </div>
+
+      <div id="board" class="board"></div>
+    </main>
+  </section>
+
+  <div id="taskModal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>Add New Task</h2>
+        <button id="closeModal" class="close-btn">&times;</button>
+      </div>
+
+      <input id="taskTitle" type="text" placeholder="Task title">
+      <textarea id="taskDescription" placeholder="Task description"></textarea>
+
+      <select id="taskColumn">
+        <option value="todo">To Do</option>
+        <option value="progress">In Progress</option>
+        <option value="testing">Testing</option>
+        <option value="done">Done</option>
+      </select>
+
+      <button id="saveTaskBtn">Add Task</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
